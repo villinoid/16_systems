@@ -15,6 +15,8 @@ int main(){
 	char line[100];
 	r=open("mario",O_RDONLY);
 	w=open("luigi",O_WRONLY);
+	remove("./mario");
+	remove("./luigi");
 	while(1){
 		read(r,line,sizeof(line));
 		i=0;
